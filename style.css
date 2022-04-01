@@ -1,0 +1,56 @@
+body{
+    
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+ .impColor{
+   background-color: #f4e6de;
+ }
+ .btn {background-image: linear-gradient(to right, #ff0084 0%, #33001b  51%, #ff0084  100%) }
+    /* background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%)} */
+ .btn {
+   margin: 17px 1px;
+   margin-bottom: 0;
+   padding: 9px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+  
+ }
+
+ .btn:hover {
+   background-position: right center; /* change the direction of the change here */
+    color: #fff;
+   text-decoration: none;
+ }
+
+ 
+ #addBtn, #impBtn{
+     display: inline-block;
+     padding: 9px;
+ } 
+ .btn-grad {background-image: linear-gradient(to right, #ff0084 0%, #33001b  51%, #ff0084  100%)}
+ .btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+     color: #fff;
+    text-decoration: none;
+  }
+   
