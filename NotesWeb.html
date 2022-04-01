@@ -1,20 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Notes</title>
 </head>
 
-<body class="bg-warning">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">NotesApp</a>
+            <a class="navbar-brand" href="#">NotesWeb</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -25,47 +29,59 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <!-- <form class=" d-flex my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="searchTxt" placeholder="Search" aria-label="Search">
+                    <button class="btn  my-2 my-sm-0 mx-2" type="submit">Search</button>
+                  </form> -->
+
             </div>
         </div>
     </nav>
 
     <div class="container my-3">
-        <h1>Welcome to Magic Notes</h1>
-        <div class="card">
-
-            <div class="card-body">
-                <h5 class="card-title">Add a note</h5>
-                
-                <div class="mb-3">
-
-                    <textarea class="form-control" id="addText" rows="4" ></textarea>
+        <h1>Create and save your notes..</h1>
+        <div class="mb-3 ">
+            <label for="exampleFormControlTextarea1" class="form-label"></label>
+            <textarea class="form-control" id="Textarea" rows="8" placeholder="Write here..."></textarea>
+        </div>
+        <button type="button " class=" btn" id="addBtn">ADD</button>
+        <button type="button " class="btn mx-2" id="impBtn">Add as important</button>
+        <hr>
+        <h1> Notes list</h1>
+        <hr>
+        <div class="container">
+            <div class="row mx-0">
+                <div class="col">
+                    <div class="row container my-3 " id="bookmark"> </div>
                 </div>
-                <button class="btn btn-primary" id="addBtn">Add Note</button>
-                <button class="btn btn-primary" id="markBtn">Mark as important</button>
+                <div class="col">
+                    <div id="card-container" class="row container my-3 "></div>
+
+                </div>
+                <!-- <div id="card-container" class="row  my-3 "></div> -->
+
             </div>
         </div>
-        <hr>
-        <h1> Your Notes</h1>
-        <hr>
-        <div id="notes" class="row container-fluid"></div>
+
     </div>
 
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
-    <script src="NotesWeb.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <script src="notes.js"></script>
 </body>
 
 </html>
